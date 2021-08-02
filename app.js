@@ -56,33 +56,33 @@ axios.get('https://api.covid19api.com/summary')
         console.log('What is your error?', err)
     });
 
-let filterInput = document.getElementById('filterInput');
-filterInput.addEventListener('keyup', filterNames);
+// let filterInput = document.getElementById('filterInput');
+// filterInput.addEventListener('keyup', filterNames);
 
-/// Search feature found here -https://www.youtube.com/watch?v=G1eW3Oi6uoc&ab_channel=TraversyMedia
-function filterNames() {
-    //get value of input
-    let filterValue = document.getElementById('filterInput').value.toUpperCase();
-    console.log(filterValue)
-    //Get divs with country
-    let ul = document.getElementById('names');
-    //get .country-card 
-    let li = ul.querySelectorAll('li');
+// /// Search feature found here -https://www.youtube.com/watch?v=G1eW3Oi6uoc&ab_channel=TraversyMedia
+// function filterNames() {
+//     //get value of input
+//     let filterValue = document.getElementById('filterInput').value.toUpperCase();
+//     console.log(filterValue)
+//     //Get divs with country
+//     let ul = document.getElementById('names');
+//     //get .country-card 
+//     let li = ul.querySelectorAll('li');
 
-    // Loop the cards
+//     // Loop the cards
 
-    for (let i = 0; i < li.length; i++ ){ 
-        console.log(li.length)
-        let hThree = li[i].querySelector('country-card')[0];
-        // [0] = get the current link 
-        // if mathced 
-        console.log(filterValue)
-        if (hThree.innerHTML.toUpperCase.indexOf(filterValue) > -1){
-            li[i].style.display = '';
-        } else {
-            li[i].style.display = 'none';
+//     for (let i = 0; i < li.length; i++ ){ 
+//         console.log(li.length)
+//         let hThree = li[i].querySelector('country-card')[0];
+//         // [0] = get the current link 
+//         // if mathced 
+//         console.log(results)
+//         if (hThree.innerHTML.toUpperCase.indexOf(filterValue) > -1){
+//             li[i].style.display = '';
+//         } else {
+//             li[i].style.display = 'none';
 
-            }
-        }
-    console.log('Hello Lists', li.length)
-}
+//             }
+//         }
+//     console.log('Hello Lists', li.length)
+// }

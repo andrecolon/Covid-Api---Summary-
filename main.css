@@ -8,8 +8,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     flex-grow: 2;
-    /* justify-content: space-between; */
-    align-content: space-around;
+    justify-content: space-between;
+    /* align-content: space-around; */
 }
 
 .country-card {
