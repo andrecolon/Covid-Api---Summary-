@@ -86,3 +86,5 @@ axios.get('https://api.covid19api.com/summary')
 //         }
 //     console.log('Hello Lists', li.length)
 // }
+
+// Try this one - https://www.w3schools.com/howto/howto_js_filter_lists.asp
