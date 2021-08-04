@@ -45,7 +45,7 @@ const countryCard = (obj) => {
 axios.get('https://api.covid19api.com/summary')
     .then(response => {
         const entryPoint = document.querySelector('.entry')
-        // console.log(response.data)
+        //console.log(response.data)
 
         response.data.Countries.forEach(cntry => {
             const newEntry = countryCard(cntry)
@@ -55,10 +55,11 @@ axios.get('https://api.covid19api.com/summary')
     .catch(err => {
         console.log('What is your error?', err)
     });
-
+// Do I need async first?
     let input, filter, ul, li, a, i, txtValue;
     input = document.getElementById('myInput');
     filter = input.value.toUpperCase();
+    console.log(input.value)
     ul = document.getElementById("entry");
     li = ul.querySelector('li');
 
