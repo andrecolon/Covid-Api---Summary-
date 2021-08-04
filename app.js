@@ -45,7 +45,7 @@ const countryCard = (obj) => {
 axios.get('https://api.covid19api.com/summary')
     .then(response => {
         const entryPoint = document.querySelector('.entry')
-        // console.log(response.data)
+        //console.log(response.data)
 
         response.data.Countries.forEach(cntry => {
             const newEntry = countryCard(cntry)
@@ -55,6 +55,23 @@ axios.get('https://api.covid19api.com/summary')
     .catch(err => {
         console.log('What is your error?', err)
     });
+// Do I need async first?
+    let input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    console.log(input.value)
+    ul = document.getElementById("entry");
+    li = ul.querySelector('li');
+
+for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("h3")[0];
+    txtValue = h3.textContent || h3.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        li[i].style.display = "";
+    } else {
+        li[i].style.display = "none";
+    }
+}
 
 // let filterInput = document.getElementById('filterInput');
 // filterInput.addEventListener('keyup', filterNames);
@@ -86,3 +103,5 @@ axios.get('https://api.covid19api.com/summary')
 //         }
 //     console.log('Hello Lists', li.length)
 // }
+
+// Try this one - https://www.w3schools.com/howto/howto_js_filter_lists.asp
