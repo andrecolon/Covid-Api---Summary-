@@ -62,35 +62,26 @@ function filterNames() {
   console.log(filterValue);
   //Get divs with country
   let ul = document.getElementById("names");
+  console.log(ul);
   //get .country-card
-  let li = ul.querySelectorAll("li");
+  let li = ul.querySelectorAll("li.country-card");
 
   // Loop the cards
 
   for (let i = 0; i < li.length; i++) {
     console.log("My list length", li.length);
-    let hThree = li[i].querySelector("country-card");
-
+    let hThree = li[i].getElementsByTagName("h3")[0];
+    console.log(hThree);
     // [0] = get the current link
     // if mathced
     //asdconsole.log("My results", results);
-    if (hThree.innerHTML.toUpperCase.indexOf(filterValue) > -1) {
+    if (hThree.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
       li[i].style.display = "";
     } else {
       li[i].style.display = "none";
     }
   }
   console.log("Hello Lists", li.length);
-
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("h3")[0];
-    txtValue = h3.textContent || h3.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
-  }
 }
 
 // Try this one - https://www.w3schools.com/howto/howto_js_filter_lists.asp
