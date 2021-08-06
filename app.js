@@ -50,27 +50,18 @@ axios
   .catch((err) => {
     console.log("What is your error?", err);
   });
-// Do I need async first?
 
 let filterInput = document.getElementById("filterInput");
 filterInput.addEventListener("keyup", filterNames);
 
 /// Search feature found here -https://www.youtube.com/watch?v=G1eW3Oi6uoc&ab_channel=TraversyMedia
 function filterNames() {
-  //get value of input
   let filterValue = document.getElementById("filterInput").value.toUpperCase();
-  //Get divs with country
   let ul = document.getElementById("names");
-  //get .country-card
   let li = ul.querySelectorAll("li.country-card");
-
-  // Loop the cards
 
   for (let i = 0; i < li.length; i++) {
     let hThree = li[i].getElementsByTagName("h3")[0];
-    // [0] = get the current link
-    // if mathced
-    //asdconsole.log("My results", results);
     if (hThree.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
       li[i].style.display = "";
     } else {
@@ -79,3 +70,4 @@ function filterNames() {
   }
 }
 // Short polling = new data refresh on state change
+// https://viktorfejes.com/article/simple-state-management-with-vanilla-js
