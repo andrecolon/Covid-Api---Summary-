@@ -40,7 +40,7 @@ axios
   .get("https://api.covid19api.com/summary")
   .then((response) => {
     const entryPoint = document.querySelector(".entry");
-    //console.log(response.data)
+    console.log(response.data);
 
     response.data.Countries.forEach((cntry) => {
       const newEntry = countryCard(cntry);
@@ -59,19 +59,15 @@ filterInput.addEventListener("keyup", filterNames);
 function filterNames() {
   //get value of input
   let filterValue = document.getElementById("filterInput").value.toUpperCase();
-  console.log(filterValue);
   //Get divs with country
   let ul = document.getElementById("names");
-  console.log(ul);
   //get .country-card
   let li = ul.querySelectorAll("li.country-card");
 
   // Loop the cards
 
   for (let i = 0; i < li.length; i++) {
-    console.log("My list length", li.length);
     let hThree = li[i].getElementsByTagName("h3")[0];
-    console.log(hThree);
     // [0] = get the current link
     // if mathced
     //asdconsole.log("My results", results);
@@ -81,7 +77,5 @@ function filterNames() {
       li[i].style.display = "none";
     }
   }
-  console.log("Hello Lists", li.length);
 }
-
-// Try this one - https://www.w3schools.com/howto/howto_js_filter_lists.asp
+// Short polling = new data refresh on state change
