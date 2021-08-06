@@ -1,5 +1,5 @@
 const countryCard = (obj) => {
-  const newCard = document.createElement("div");
+  const newCard = document.createElement("li");
   const countryName = document.createElement("h3");
   const newConfirmed = document.createElement("p");
   const newDead = document.createElement("p");
@@ -40,7 +40,7 @@ axios
   .get("https://api.covid19api.com/summary")
   .then((response) => {
     const entryPoint = document.querySelector(".entry");
-    console.log(response.data);
+    //console.log(response.data)
 
     response.data.Countries.forEach((cntry) => {
       const newEntry = countryCard(cntry);
@@ -50,5 +50,47 @@ axios
   .catch((err) => {
     console.log("What is your error?", err);
   });
-// Search feature 
-//https://www.florin-pop.com/blog/2019/06/vanilla-javascript-instant-search/
+// Do I need async first?
+
+let filterInput = document.getElementById("filterInput");
+filterInput.addEventListener("keyup", filterNames);
+
+/// Search feature found here -https://www.youtube.com/watch?v=G1eW3Oi6uoc&ab_channel=TraversyMedia
+function filterNames() {
+  //get value of input
+  let filterValue = document.getElementById("filterInput").value.toUpperCase();
+  console.log(filterValue);
+  //Get divs with country
+  let ul = document.getElementById("names");
+  //get .country-card
+  let li = ul.querySelectorAll("li");
+
+  // Loop the cards
+
+  for (let i = 0; i < li.length; i++) {
+    console.log("My list length", li.length);
+    let hThree = li[i].querySelector("country-card");
+
+    // [0] = get the current link
+    // if mathced
+    //asdconsole.log("My results", results);
+    if (hThree.innerHTML.toUpperCase.indexOf(filterValue) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+  console.log("Hello Lists", li.length);
+
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("h3")[0];
+    txtValue = h3.textContent || h3.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
+// Try this one - https://www.w3schools.com/howto/howto_js_filter_lists.asp

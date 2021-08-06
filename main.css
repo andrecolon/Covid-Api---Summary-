@@ -1,18 +1,29 @@
 .container {
-    margin: 0 auto;
-    width: 90%;
+  margin: 0 auto;
+  width: 90%;
 }
 
 .entry {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* align-content: space-around; */
 }
 
 .country-card {
-    width: 200px;
-    width: 200px;
-    padding: 10px;
-    margin: 10px;
-    border: 1px solid #999999;
+  min-width: 200px;
+  padding: 10px;
+  margin: 10px;
+  flex-grow: 1;
+  border: 1px solid #d6d6d6;
+  border-radius: 4px;
+  box-shadow: 5px 2px rgb(168, 166, 166, 0.5);
+}
+
+@media (max-width: 505px) {
+  .country-card {
+    background: red;
+    min-width: 100%;
+  }
 }

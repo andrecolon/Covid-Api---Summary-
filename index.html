@@ -4,21 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learning APi's</title>
+    <title>Covid API</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js"></script>
-    <script src="app.js"></script>
+    
     <link rel="stylesheet" href="main.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 
 <body>
     <div class="container">
         <div class="outPut">
             <h1>Covid API</h1>
-            <input type="text" id="search" placeholder="Search for a country">
-            <div class="entry results"></div>
+            <input type="text" id="filterInput" placeholder="Search countries">
+            <ul class="entry" id="names"></ul>
+
         </div>
     </div>
-
+<script src="app.js"></script>
 </body>
 
 </html>
