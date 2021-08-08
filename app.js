@@ -22,12 +22,18 @@ const countryCard = (obj) => {
   newCard.classList.add("country-card");
 
   newCard.appendChild(newSlug);
-  newCard.appendChild(countryName).style.color = "#333333";
-  newCard.appendChild(newConfirmed).style.color = "#333333";
-  newCard.appendChild(totalDeaths).style.color = "#333333";
-  newCard.appendChild(newRcov).style.color = "#333333";
-  newCard.appendChild(totalConfirmed).style.color = "#333333";
-  newCard.appendChild(totalRecovered).style.color = "#333333";
+  newCard.appendChild(countryName);
+  // .style.color = "#333333";
+  newCard.appendChild(newConfirmed);
+  // .style.color = "#333333";
+  newCard.appendChild(totalDeaths);
+  // .style.color = "#333333";
+  newCard.appendChild(newRcov);
+  // .style.color = "#333333";
+  newCard.appendChild(totalConfirmed);
+  // .style.color = "#333333";
+  newCard.appendChild(totalRecovered);
+  // .style.color = "#333333";
 
   // newCard.addEventListener('click', () => {
   //     newCard.classList.add('selected')
@@ -46,6 +52,16 @@ axios
       const newEntry = countryCard(cntry);
       entryPoint.appendChild(newEntry) - 1;
     });
+  })
+  .catch((err) => {
+    console.log("What is your error?", err);
+  });
+
+//  World pop data
+axios
+  .get("https://www.worldpop.org/rest/data/pop/wpgp")
+  .then((response) => {
+    console.log(response.data);
   })
   .catch((err) => {
     console.log("What is your error?", err);
@@ -71,3 +87,6 @@ function filterNames() {
 }
 // Short polling = new data refresh on state change
 // https://viktorfejes.com/article/simple-state-management-with-vanilla-js
+
+// Multiple axios calls
+// https://www.storyblok.com/tp/how-to-send-multiple-requests-using-axios
