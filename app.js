@@ -57,11 +57,11 @@ axios
     console.log("What is your error?", err);
   });
 
-//  World pop data
+//  World pop data -- https://www.worldpop.org/sdi/introapi
 axios
   .get("https://www.worldpop.org/rest/data/pop/wpgp")
-  .then((response) => {
-    console.log(response.data);
+  .then((res) => {
+    console.log(res.data);
   })
   .catch((err) => {
     console.log("What is your error?", err);
@@ -70,7 +70,6 @@ axios
 let filterInput = document.getElementById("filterInput");
 filterInput.addEventListener("keyup", filterNames);
 
-/// Search feature found here -https://www.youtube.com/watch?v=G1eW3Oi6uoc&ab_channel=TraversyMedia
 function filterNames() {
   let filterValue = document.getElementById("filterInput").value.toUpperCase();
   let ul = document.getElementById("names");
