@@ -7,10 +7,20 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: "Source Sans Pro", sans-serif;
+h6,
+a,
+a:active,
+a:hover {
+  font-family: "Rajdhani", sans-serif;
   color: #38544d;
   font-size: 2.5rem;
+}
+
+a,
+a:active,
+a:hover {
+  color: #38544d;
+  text-decoration: none;
 }
 
 p {
@@ -25,6 +35,21 @@ p:hover {
 .container {
   margin: 0 auto;
   width: 90%;
+}
+
+.alphabetNav {
+  display: flex;
+}
+
+.alphabetNav ul {
+  display: flex;
+  list-style: none;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Maybe an alternative layout for viewports */
+}
+.alphabetNav ul li {
+  width: 2rem;
 }
 
 .entry {
@@ -50,8 +75,8 @@ input#filterInput {
   font-size: 2.6rem;
   color: burlywood;
   text-transform: uppercase;
-  width: 100%;
   background: #121414;
+  border-bottom: 1px solid #52776e;
 }
 
 .cases-confirmed-p {
