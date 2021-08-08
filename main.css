@@ -1,3 +1,27 @@
+body {
+  background-color: #0d1210;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #38544d;
+  font-size: 2.5rem;
+}
+
+p {
+  font-family: "Raleway", sans-serif;
+  color: #38544d;
+}
+
+p:hover {
+  font-weight: 400;
+  color: #52776e;
+}
 .container {
   margin: 0 auto;
   width: 90%;
@@ -16,22 +40,29 @@
   padding: 10px;
   margin: 10px;
   flex-grow: 1;
-  border: 1px solid #d6d6d6;
+  border: 1px solid #232f2d;
   border-radius: 4px;
-  box-shadow: 5px 2px rgb(168, 166, 166, 0.5);
+
+  background: linear-gradient(50deg, #080808, #212726);
 }
 
 input#filterInput {
   font-size: 2.6rem;
   color: burlywood;
   text-transform: uppercase;
+  width: 100%;
+  background: #121414;
+}
+
+.cases-confirmed-p {
+  font-weight: 400;
+  color: #52776e;
 }
 
 /* Fade in text */
 
 .country-card {
   display: inline-block;
-  color: rgb(218, 228, 230);
   animation: fadeIn linear 0.5s;
   -webkit-animation: fadeIn linear 0.5s;
   -moz-animation: fadeIn linear 0.5s;
