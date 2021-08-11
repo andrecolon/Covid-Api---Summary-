@@ -56,12 +56,13 @@ axios
 axios
   .get("https://www.worldpop.org/rest/data/pop/wpgp")
   .then((res) => {
-    console.log(res.data);
+    // console.log(res.data);
   })
   .catch((err) => {
     console.log("What is your error?", err);
   });
 
+// Convert below code to DOM creation
 let filterInput = document.getElementById("filterInput");
 filterInput.addEventListener("keyup", filterNames);
 
@@ -80,11 +81,24 @@ function filterNames() {
   }
 }
 
-let hover = document
-  .querySelectorAll(".alphabetNav ul li a")
-  .addEventListener("click", (event) => {
-    console.log(event);
+function alphabetFilter() {
+  let hover = document.querySelectorAll(".navList");
+  document.addEventListener("click", (e) => {
+    e.preventDefault();
+    let ul = document.getElementById("names");
+    let li = ul.querySelectorAll("li.country-card");
+    for (let i = 0; i < li.length; i++) {
+      let hThree = li[i].getElementsByTagName("h3")[0];
+      if (hThree.indexOf(hover) > -1) {
+        li[i].style.display = "";
+      } else {
+        li[i].style.display = "none";
+      }
+    }
+    console.log(hover);
   });
+}
+
 // Short polling = new data refresh on state change
 // https://viktorfejes.com/article/simple-state-management-with-vanilla-js
 
