@@ -25,15 +25,10 @@ const countryCard = (obj) => {
   newCard.appendChild(countryName);
   // .style.color = "#333333";
   newCard.appendChild(newConfirmed);
-  // .style.color = "#333333";
   newCard.appendChild(totalDeaths);
-  // .style.color = "#333333";
   newCard.appendChild(newRcov);
-  // .style.color = "#333333";
   newCard.appendChild(totalConfirmed);
-  // .style.color = "#333333";
   newCard.appendChild(totalRecovered);
-  // .style.color = "#333333";
 
   // newCard.addEventListener('click', () => {
   //     newCard.classList.add('selected')
@@ -84,6 +79,12 @@ function filterNames() {
     }
   }
 }
+
+let hover = document
+  .querySelectorAll(".alphabetNav ul li a")
+  .addEventListener("click", (event) => {
+    console.log(event);
+  });
 // Short polling = new data refresh on state change
 // https://viktorfejes.com/article/simple-state-management-with-vanilla-js
 

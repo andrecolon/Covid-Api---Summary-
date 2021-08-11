@@ -12,8 +12,7 @@ a,
 a:active,
 a:hover {
   font-family: "Rajdhani", sans-serif;
-  color: #38544d;
-  font-size: 2.5rem;
+  color: #35c5a1;
 }
 
 a,
@@ -30,15 +29,21 @@ p {
 
 p:hover {
   font-weight: 400;
-  color: #52776e;
+  color: #3da58b;
+  cursor: pointer;
 }
 .container {
   margin: 0 auto;
   width: 90%;
 }
 
+.header,
 .alphabetNav {
   display: flex;
+}
+
+.smallInfo {
+  flex-grow: 1;
 }
 
 .alphabetNav ul {
@@ -50,6 +55,10 @@ p:hover {
 }
 .alphabetNav ul li {
   width: 2rem;
+}
+
+.alphabetNav ul li a:hover {
+  color: #3da58b;
 }
 
 .entry {
@@ -81,7 +90,7 @@ input#filterInput {
 
 .cases-confirmed-p {
   font-weight: 400;
-  color: #52776e;
+  color: #3da58b;
 }
 
 /* Fade in text */
