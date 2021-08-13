@@ -12,13 +12,13 @@ a,
 a:active,
 a:hover {
   font-family: "Rajdhani", sans-serif;
-  color: #35c5a1;
+  color: #90ebd4;
 }
 
 a,
 a:active,
 a:hover {
-  color: #38544d;
+  color: #35c5a1;
   text-decoration: none;
 }
 
@@ -66,7 +66,8 @@ p:hover {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* align-content: space-around; */
+  margin: 0;
+  padding: 0;
 }
 
 .country-card {

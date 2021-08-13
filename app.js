@@ -37,7 +37,7 @@ const countryCard = (obj) => {
   return newCard;
 };
 
-axios
+const dataList = axios
   .get("https://api.covid19api.com/summary")
   .then((response) => {
     const entryPoint = document.querySelector(".entry");
@@ -81,23 +81,11 @@ function filterNames() {
   }
 }
 
-function alphabetFilter() {
-  let hover = document.querySelectorAll(".navList");
-  document.addEventListener("click", (e) => {
-    e.preventDefault();
-    let ul = document.getElementById("names");
-    let li = ul.querySelectorAll("li.country-card");
-    for (let i = 0; i < li.length; i++) {
-      let hThree = li[i].getElementsByTagName("h3")[0];
-      if (hThree.indexOf(hover) > -1) {
-        li[i].style.display = "";
-      } else {
-        li[i].style.display = "none";
-      }
-    }
-    console.log(hover);
-  });
-}
+let hover = document.querySelectorAll(".navList");
+let alphaA = document.addEventListener("click", (e) => {
+  console.log(dataList.response);
+  //e.preventDefault();
+});
 
 // Short polling = new data refresh on state change
 // https://viktorfejes.com/article/simple-state-management-with-vanilla-js
