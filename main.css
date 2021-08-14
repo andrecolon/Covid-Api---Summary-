@@ -44,6 +44,7 @@ p:hover {
 
 .smallInfo {
   flex-grow: 1;
+  padding: 1rem;
 }
 
 .alphabetNav ul {
