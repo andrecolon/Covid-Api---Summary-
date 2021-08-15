@@ -81,11 +81,19 @@ function filterNames() {
   }
 }
 
-let hover = document.querySelectorAll(".navList");
-let alphaA = document.addEventListener("click", (e) => {
-  console.log(dataList.response);
-  //e.preventDefault();
-});
+// let alphaClick = document.querySelectorAll("li.navList");
+// console.log(alphaClick);
+
+let alphaClick = document.querySelectorAll("li.navList");
+for (let i = 0; i < alphaClick.length; i++) {
+  alphaClick = document.addEventListener("click", function () {
+    if (alphaClick > -1) {
+      return alphaClick[i];
+    } else {
+      return "your inccorect!";
+    }
+  });
+}
 
 // Short polling = new data refresh on state change
 // https://viktorfejes.com/article/simple-state-management-with-vanilla-js
