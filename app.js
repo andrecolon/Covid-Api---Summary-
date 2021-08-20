@@ -81,16 +81,15 @@ function filterNames() {
   }
 }
 
-// let alphaClick = document.querySelectorAll("li.navList");
-// console.log(alphaClick);
-
 let alphaClick = document.querySelectorAll("li.navList");
+//console.log(alphaClick);
+
 for (let i = 0; i < alphaClick.length; i++) {
   alphaClick = document.addEventListener("click", function () {
-    if (alphaClick > -1) {
+    if (alphaClick == true) {
       return alphaClick[i];
     } else {
-      return "your inccorect!";
+      return "your incorrect!";
     }
   });
 }

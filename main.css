@@ -42,8 +42,9 @@ p:hover {
   display: flex;
 }
 
-.smallInfo {
-  flex-grow: 1;
+.smallInfo,
+.graph {
+  flex-basis: auto;
   padding: 1rem;
 }
 
