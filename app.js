@@ -81,18 +81,25 @@ function filterNames() {
   }
 }
 
-let alphaClick = document.querySelectorAll("li.navList");
-//console.log(alphaClick);
+const countryList = () => {
+  let allHthree = [...hThree];
+  console.log(allHthree);
+};
 
-for (let i = 0; i < alphaClick.length; i++) {
-  alphaClick = document.addEventListener("click", function () {
-    if (alphaClick == true) {
-      return alphaClick[i];
-    } else {
-      return "your incorrect!";
-    }
-  });
+let alphaClickLi = document.querySelectorAll("li.navList");
+for (let i = 0; i < alphaClickLi.length; i++) {
+  let hThree = alphaClickLi[i].getElementsByTagName("h3")[0];
+  console.log(hThree);
 }
+
+let alphaArr = [...alphaClickLi];
+for (i = 0; i < alphaArr.length; i++) {
+  console.log(alphaArr[i]);
+}
+
+let click = addEventListener("click", function () {
+  console.log("Hello nurse");
+});
 
 // Short polling = new data refresh on state change
 // https://viktorfejes.com/article/simple-state-management-with-vanilla-js
