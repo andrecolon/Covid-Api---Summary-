@@ -81,16 +81,23 @@ function filterNames() {
   }
 }
 
-function myEvnt() {
-  for (i = 0; i < alphaClickLi.length; i++) {
-    if (alphaClickLi[i] > -1) {
-      alphaClickLi[i].style.display = "none";
-    } else {
-      alphaClickLi[i].style.display = "";
-      console.log();
-    }
-  }
+let clickalphaArr = [];
+let alphaArr = document.querySelectorAll(".navList");
+let toggleLink = document.querySelectorAll(".active");
+
+for (let i = 0; i < alphaArr.length; i++) {
+  alphaArr[i].addEventListener("click", () => {
+    // this.classList.add("active");
+    console.log("Hello Nurse", [i]);
+  });
 }
+console.log(alphaArr);
+
+// Onclick set class active on html li a
+// if li a is active compare alsphabet position with country
+// return similar countries with alphabet active character
+
+//https://youtu.be/z0HgLLkH824?t=3101
 
 // Short polling = new data refresh on state change
 // https://viktorfejes.com/article/simple-state-management-with-vanilla-js
