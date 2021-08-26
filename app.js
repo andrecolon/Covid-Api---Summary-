@@ -83,18 +83,17 @@ function filterNames() {
 
 let clickalphaArr = [];
 let alphaArr = document.querySelectorAll(".navList");
-let toggleLink = document.querySelectorAll(".active");
+let alphaList = Array.from(alphaArr);
 
-for (let i = 0; i < alphaArr.length; i++) {
-  alphaArr[i].addEventListener("click", () => {
-    // this.classList.add("active");
-    console.log("Hello Nurse", [i]);
+for (let i = 0; i < alphaList.length; i++) {
+  alphaList[i].addEventListener("click", () => {
+    console.log("Hello Nurse", alphaList[i]);
+    //newWindow = window.open("http://www.mydomain.com");
   });
 }
-console.log(alphaArr);
 
 // Onclick set class active on html li a
-// if li a is active compare alsphabet position with country
+// if li a is active compare alphabet position with country
 // return similar countries with alphabet active character
 
 //https://youtu.be/z0HgLLkH824?t=3101
