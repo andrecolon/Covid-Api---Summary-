@@ -89,6 +89,7 @@ input#filterInput {
   text-transform: uppercase;
   background: #121414;
   border-bottom: 1px solid #52776e;
+  height: fit-content;
 }
 
 .cases-confirmed-p {
