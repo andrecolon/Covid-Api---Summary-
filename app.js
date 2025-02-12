@@ -84,7 +84,8 @@ function filterNames() {
 
 let clickalphaArr = [];
 let alphaArr = document.querySelectorAll(".navList");
-let toggleLink = document.querySelectorAll(".active");
+let alphaList = Array.from(alphaArr);
+
 
 
 for (let i = 0; i < alphaArr.length; i++) {
@@ -99,7 +100,7 @@ for (let i = 0; i < alphaArr.length; i++) {
 
 
 // Onclick set class active on html li a
-// if li a is active compare alsphabet position with country
+// if li a is active compare alphabet position with country
 // return similar countries with alphabet active character
 
 //https://youtu.be/z0HgLLkH824?t=3101
