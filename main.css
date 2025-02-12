@@ -40,6 +40,7 @@ p:hover {
 .header,
 .alphabetNav {
   display: flex;
+  flex-basis: 100%;
 }
 
 .smallInfo,
@@ -51,6 +52,7 @@ p:hover {
 .alphabetNav ul {
   display: flex;
   list-style: none;
+  
   width: 100%;
   justify-content: space-between;
   flex-wrap: wrap; /* Maybe an alternative layout for viewports */
