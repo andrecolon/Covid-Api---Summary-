@@ -41,7 +41,7 @@ const dataList = axios
   .get("https://api.covid19api.com/summary")
   .then((response) => {
     const entryPoint = document.querySelector(".entry");
-    console.log(response.data);
+    // console.log(response.data);
 
     response.data.Countries.forEach((cntry) => {
       const newEntry = countryCard(cntry);
@@ -56,7 +56,7 @@ const dataList = axios
 axios
   .get("https://www.worldpop.org/rest/data/pop/wpgp")
   .then((res) => {
-    // console.log(res.data);
+    console.log(res.data, "Worldpop");
   })
   .catch((err) => {
     console.log("What is your error?", err);
@@ -79,19 +79,24 @@ function filterNames() {
       li[i].style.display = "none";
     }
   }
+  console.log(hThree)
 }
 
 let clickalphaArr = [];
 let alphaArr = document.querySelectorAll(".navList");
 let toggleLink = document.querySelectorAll(".active");
 
+
 for (let i = 0; i < alphaArr.length; i++) {
   alphaArr[i].addEventListener("click", () => {
-    // this.classList.add("active");
-    console.log("Hello Nurse", [i]);
+    alphaArr[i].classList.add("active");
+    if (!alphaArr[i]) {
+
+      console.log(alphaArr[i].style.display = "none")
+    }
   });
 }
-console.log(alphaArr);
+
 
 // Onclick set class active on html li a
 // if li a is active compare alsphabet position with country
